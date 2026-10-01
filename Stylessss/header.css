@@ -767,6 +767,12 @@ button:hover {
         line-height: 19.5px;
     }
 
+    .footer-links-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
     .footer-container{
         width: 80%;
         display: flex;
