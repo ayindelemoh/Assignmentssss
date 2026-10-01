@@ -9,13 +9,13 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     background-color: #f9fafc;
-}
-
+} 
 header {
     position: sticky;
-    top: 20px; 
+    top: 20px;
+    /* left:50%;
+    transform: translateX(-50%); */
     z-index: 1000; 
-    
     width: 88%;
     margin: 20px auto 0 auto;
     background-color: white;
@@ -70,7 +70,7 @@ button:hover {
 
 .overall {
     width: 88%;
-    margin: 70px auto 0 auto;
+    margin: 120px auto 0 auto;
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -110,8 +110,11 @@ button:hover {
 
 .btn-secondary {
     background-color: transparent;
-    color: #4b5563;
-    border: 1px solid #d1d5db;
+    color: black;
+    border: none
+}
+.btn-secondary:hover{
+    text-decoration: underline;
 }
 
 .imgtwo {
@@ -233,6 +236,11 @@ button:hover {
     text-align: center;
 }
 
+.features-title:hover{
+    color: #05976a;
+    text-decoration: underline;
+}
+
 .features-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -276,6 +284,7 @@ button:hover {
     width: 100%;
     margin: 70px auto 0 auto;
     background-color: white;
+    text-align: center;
 }
 
 .howitworksover {
@@ -348,6 +357,11 @@ button:hover {
     object-fit: contain;
 }
 
+#btnwho{
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
 .benefit {
     width: 88%;
     margin: 70px auto 0 auto;
@@ -364,23 +378,39 @@ button:hover {
 }
 
 .benefit-container {
-    background-color: #05976a;
-    border-radius: 10px;
+    font-family: 'inter', sans-serif;
+    /* border-radius: 10px; */
     padding: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    
+
 }
 
-#benefit-text h2,
-#benefit-text p {
-    color: white;
+#benefit-text h2{
+    color: #1E293B;
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 700;
 }
 
-.benefitlist li {
-    margin-bottom: 16px;
+/* .check2{
+    
+} */
+
+.benefitlist {
+    width: 80%;
+
+    & li {
+    color: #64748B;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25.5px;
+    }
 }
 
 .contacts {
@@ -545,4 +575,390 @@ button:hover {
     padding: 25px 0;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 767px){
+    body{
+       min-width: 100%;
+       overflow-x: hidden;
+    }
+    header{
+        width: 90%;
+        
+        & .mystyles{
+            display: none;
+        }
+        & button{
+            padding: 7px 20px; 
+        }
+    }
+    .overall{
+        width: 90%;
+        margin: 100px auto 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .imgtwo{
+        width: 100%;
+    }
+
+    .imgtwo img{
+            height: auto;
+            width: 100%;
+    }
+
+    .main-title{
+            font-size: 24px;
+            
+    }
+
+    .subtitle{
+            font-size: 16px;
+    }
+
+    .exam{
+            display: none;
+    }
+
+    .button-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+    }
+
+    #btn-first{
+        border-radius: 10px;
+        padding: 13px 10px;
+    }
+
+    .btn-secondary{
+        border: none;
+    }
+
+    .about{
+        width: 90%;
+        margin: 50px auto 0 auto;
+    }
+
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    .about-images{
+        width: 100%;
+    }
+
+    .about-text{
+        width: 100%;
+        text-align: center;
+
+        & h2{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        & p{
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+
+    .checklist {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        list-style: none;
+        margin:0 auto 25px auto;
+    }
+    
+    .checklist li{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    .features{
+        width: 90%;
+        margin: 50px auto 0 auto;
+        
+
+    }
+
+    .features-title{
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
+    }
+
+    .features-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .howitworksover{
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        & h3{
+            width: 100%;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+
+    .icon-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .benefit{
+        width: 90%;
+        margin: 50px auto 0 auto;
+    }
+
+    .benefit-container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .contacts{
+        width: 90%;
+        margin: 50px auto 0 auto;
+    }
+
+    .contact-title{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .contact-info-overall{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .contact-info h3{
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 22.5px;
+    }
+
+    .contact-info p{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+
+    .footer-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 90%;
+        padding: 12px 24px;
+    }
+
+    header .mystyles {
+        display: none;
+    }
+
+    header button {
+        padding: 10px 28px;
+        font-size: 15px;
+    }
+
+    .overall {
+        width: 90%;
+        margin-top: 110px;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .imgtwo {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .main-title {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .exam {
+        display: block; 
+        font-size: 16px;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 36px;
+        gap: 30px;
+    }
+
+    .about-images {
+        width: 80%;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .checklist {
+        display: inline-block;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .features {
+        width: 90%;
+    }
+
+    .features-title {
+        font-size: 32px;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .feature-card img {
+        height: 200px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+    }
+
+    .howitworksover {
+        width: 90%;
+    }
+
+    .howitworks h3 {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .icon-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .icon-wrap {
+        width: 90px;
+        height: 90px;
+    }
+
+    .benefit {
+        width: 90%;
+    }
+
+    .benefit-title {
+        font-size: 32px;
+    }
+
+    .benefit-container {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+    #benefit-text h2 {
+        font-size: 24px;
+    }
+
+    .benefitlist {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .benefitlist li {
+        font-size: 16px;
+    }
+
+    .contacts {
+        width: 90%;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .contact-info-overall {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .contact-text h3 {
+        font-size: 15px;
+    }
+
+    .contact-text p {
+        font-size: 13px;
+    }
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
 }
