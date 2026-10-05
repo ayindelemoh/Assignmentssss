@@ -68,6 +68,13 @@ button:hover {
     transition: all 0.3s ease;
 }
 
+.mobile-menu-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .overall {
     width: 88%;
     margin: 120px auto 0 auto;
@@ -589,9 +596,21 @@ button:hover {
             display: none;
         }
         & button{
+            display: none;
             padding: 7px 20px; 
         }
     }
+
+      .mobile-menu-icon {
+        display: flex; 
+    }
+
+    .mobile-menu-icon img{
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
     .overall{
         width: 90%;
         margin: 100px auto 0 auto;
@@ -830,6 +849,7 @@ button:hover {
     .button-container {
         justify-content: center;
     }
+    
 
     .about {
         width: 90%;
